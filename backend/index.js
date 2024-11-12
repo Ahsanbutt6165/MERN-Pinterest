@@ -8,7 +8,7 @@ import path from "path";
 // importing routes
 import userRoutes from "./routes/userRoutes.js";
 import pinRoutes from "./routes/pinRoutes.js";
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 cloudinary.v2.config({
   cloud_name: process.env.Cloud_Name,
